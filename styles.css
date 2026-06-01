@@ -173,18 +173,20 @@ section {
     color: var(--color-primary);
 }
 
-/* Services */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
 .service-card {
+    flex: 1 1 300px;
+    max-width: 380px;
     background-color: var(--color-accent);
     padding: 40px;
     border-radius: 12px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.05);
     cursor: pointer;
 }
@@ -310,6 +312,19 @@ footer {
     transform: translateY(0);
 }
 
+/* Advanced Animations */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatElement {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
 /* Hero Form */
 .hero-form-container {
     background: rgba(5, 5, 5, 0.8);
@@ -318,8 +333,10 @@ footer {
     padding: 40px;
     border-radius: 12px;
     width: 400px;
+    max-width: 100%;
     z-index: 2;
-    animation: fadeUp 1s ease-out 0.3s backwards;
+    animation: fadeUp 1s ease-out 0.3s backwards, floatElement 6s ease-in-out infinite alternate;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 .hero-form-container h3 {
@@ -434,11 +451,17 @@ footer {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(45deg, var(--color-primary), #990000);
-    padding: 80px 50px;
+    background: linear-gradient(-45deg, #e60000, #990000, #1a1a1a, #050505);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    padding: 100px 50px;
     text-align: center;
-    border-radius: 12px;
+    border-radius: 20px;
     margin: 100px 50px;
+    box-shadow: 0 20px 50px rgba(230, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cta-content h2 {
