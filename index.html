@@ -28,6 +28,22 @@
             <p>Beat the heat with our premium auto air conditioning services. We diagnose, repair, and maintain your car's AC to keep you comfortable on the road.</p>
             <a href="services.html" class="btn">Explore Services</a>
         </div>
+        <div class="hero-form-container">
+            <h3>Get a <span>Free Quote</span></h3>
+            <form class="hero-form" onsubmit="event.preventDefault(); alert('Quote request submitted!');">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="diag">AC Diagnostics</option>
+                    <option value="repair">Compressor Repair</option>
+                    <option value="recharge">Freon Recharge</option>
+                    <option value="other">Other</option>
+                </select>
+                <button type="submit" class="btn">Request Quote</button>
+            </form>
+        </div>
     </section>
 
     <section class="services-preview">
@@ -48,6 +64,75 @@
                 <h3>Recharge & Refill</h3>
                 <p>Professional refrigerant recharge services to ensure optimal cooling performance all year round.</p>
             </div>
+            <div class="service-card fade-in-scroll" onclick="location.href='services.html'">
+                <div class="service-icon">🧼</div>
+                <h3>System Cleaning</h3>
+                <p>Eliminate musty smells and bacteria with our deep-cleaning evaporator services.</p>
+            </div>
+            <div class="service-card fade-in-scroll" onclick="location.href='services.html'">
+                <div class="service-icon">🔍</div>
+                <h3>Leak Detection</h3>
+                <p>We use UV dye and electronic sniffers to find even the smallest leaks in your system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title fade-in-scroll">Customer <span>Reviews</span></h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-in-scroll">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"My car's AC stopped working right before a road trip. ProCool fixed the compressor the same day. Extremely professional and fair pricing!"</p>
+                <p class="testimonial-author">- Sarah Jenkins</p>
+            </div>
+            <div class="testimonial-card fade-in-scroll">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"I had a mysterious leak that three other shops couldn't find. These guys found it in 20 minutes and recharged the system. Blows ice cold now."</p>
+                <p class="testimonial-author">- Mike Rodriguez</p>
+            </div>
+            <div class="testimonial-card fade-in-scroll">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Great customer service. The online quote was accurate, and the waiting area was very comfortable. Highly recommend for any AC needs."</p>
+                <p class="testimonial-author">- Emily Chen</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2 class="section-title fade-in-scroll">Frequently Asked <span>Questions</span></h2>
+        <div class="faq-container fade-in-scroll">
+            <div class="faq-item">
+                <div class="faq-question">How often should I have my car's AC checked? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">We recommend having your AC system inspected at least once a year, preferably before the hot summer months begin, to ensure it's operating efficiently.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Why is my AC blowing warm air? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">Warm air can be caused by low refrigerant levels, a failing compressor, a clogged expansion valve, or electrical issues. A professional diagnostic is required to pinpoint the exact cause.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What does an AC recharge include? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">An AC recharge involves recovering any remaining old refrigerant, vacuuming the system to remove moisture, and refilling it with the exact amount of fresh refrigerant specified by your vehicle's manufacturer.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Why does my AC smell bad when I turn it on? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">A musty or moldy smell usually indicates bacteria or mold growth in the evaporator core due to moisture buildup. We offer deep cleaning services to eliminate this odor.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long does an AC diagnostic take? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">A standard AC diagnostic typically takes about 30 to 60 minutes. We check pressures, temperatures, and use leak detection tools to assess the system's health.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer warranties on AC repairs? <span class="faq-icon">+</span></div>
+                <div class="faq-answer">Yes, we stand behind our work. All major AC repairs, including compressor replacements, come with a 12-month or 12,000-mile warranty on parts and labor.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section fade-in-scroll">
+        <div class="cta-content">
+            <h2>Ready for Ice Cold Air?</h2>
+            <p>Don't suffer through the heat. Book your appointment today and let our experts restore your car's AC to peak performance.</p>
+            <button class="btn btn-white" onclick="window.scrollTo(0,0)">Get a Free Quote Now</button>
         </div>
     </section>
 

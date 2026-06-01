@@ -42,4 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in-scroll').forEach(element => {
         observer.observe(element);
     });
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentNode;
+            
+            // Close all other open items
+            document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+                if (activeItem !== item) {
+                    activeItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
 });
